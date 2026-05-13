@@ -115,6 +115,20 @@ index=main sourcetype="access_combined_wcookie" clientip=87.194.216.51
 
 [![Timechart — activité globale sur 7 jours](4.png)](4.png)
 
+**Rappel des status codes HTTP observés :**
+
+| Status | Signification | Observation |
+|--------|--------------|-------------|
+| 200 | OK — Accès réussi | Activité dominante — navigation normale |
+| 400 | Bad Request — Requête malformée | Tentatives avec paramètres incorrects |
+| 403 | Forbidden — Accès interdit | Ressources protégées tentées |
+| 404 | Not Found — Page inexistante | Fichiers sensibles non trouvés |
+| 406 | Not Acceptable | Requêtes avec mauvais headers |
+| 408 | Request Timeout | Connexions abandonnées |
+| 500 | Internal Server Error | Erreurs côté serveur |
+| 503 | Service Unavailable | Serveur temporairement indisponible |
+| 505 | HTTP Version Not Supported | Requêtes avec version HTTP incorrecte |
+
 **Ce que le graphique révèle :**
 
 | Observation | Interprétation |

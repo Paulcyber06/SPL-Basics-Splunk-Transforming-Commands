@@ -1,6 +1,6 @@
 # SPL Basics — Épisode 2 : Analyse comportementale avec stats, top et timechart
 
-> Suite de l'Épisode 1. Après avoir détecté une IP suspecte générant des erreurs 404 sur des fichiers sensibles, nous allons maintenant analyser son comportement complet en utilisant trois commandes transforming essentielles : **stats**, **top** et **timechart**.
+> Troisième incident dans la série d'attaques contre **Buttercup Games** — l'IP suspecte n'a pas trouvé `/passwords.pdf` mais utilise activement le site. Le SOC approfondit l'investigation avec les commandes transforming **stats**, **top** et **timechart**.
 
 ---
 

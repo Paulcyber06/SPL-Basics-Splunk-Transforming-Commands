@@ -197,4 +197,4 @@ Le dataset utilisé est le `tutorialdata.zip` officiel de Splunk, disponible gra
 
 ---
 
-*© Paulcyber06 — Tous droits réservés. Reproduction interdite sans autorisation.*
+*© Paulcyber06 — Tous droits réservés.*

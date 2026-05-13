@@ -1,4 +1,4 @@
-# SPL Basics — Épisode 2 : Analyse comportementale avec stats, top et timechart
+# Épisode 3 — Splunk : Analyse Comportementale d'une IP Suspecte
 
 > Troisième incident dans la série d'attaques contre **Buttercup Games** — l'IP suspecte n'a pas trouvé `/passwords.pdf` mais utilise activement le site. Le SOC approfondit l'investigation avec les commandes transforming **stats**, **top** et **timechart**.
 

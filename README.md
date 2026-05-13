@@ -19,11 +19,9 @@
 
 ## 1. Contexte
 
-Dans l'épisode précédent, nous avons identifié l'IP `87.194.216.51` comme suspecte — elle générait des erreurs 404 répétées sur des fichiers sensibles comme `/passwords.pdf` et `/hidden/anna_nicole.html`.
+Suite à la détection de l'activité de reconnaissance dans l'Épisode 1, le SOC approfondit l'investigation sur l'IP suspecte `87.194.216.51`. L'objectif est de comprendre son comportement complet — pas uniquement les erreurs 404, mais l'ensemble de ses interactions avec le serveur web de Buttercup Games.
 
-Mais une question restait en suspens : **cette IP a-t-elle réussi à accéder à quelque chose sur le site ?**
-
-C'est ce que nous allons analyser maintenant, en utilisant trois commandes transforming qui permettent de transformer des événements bruts en données exploitables.
+L'attaquant n'a toujours pas trouvé `/passwords.pdf`. Mais son activité persistante sur 7 jours laisse supposer qu'il cherche une autre voie d'entrée.
 
 ---
 

@@ -26,8 +26,18 @@ L'objectif est de comprendre son comportement complet — pas uniquement les err
 L'attaquant n'a toujours pas trouvé `/passwords.pdf`. Mais son activité persistante sur 7 jours laisse supposer qu'il cherche une autre voie d'entrée.
 
 ---
+## 2. Réputation de l'IP
 
-## 2. Vérification des accès réussis
+Avant d'approfondir l'analyse, on vérifie la réputation de l'IP `87.194.216.51` sur les bases de données publiques.
+
+| Source | Résultat |
+|--------|----------|
+| AbuseIPDB | 0% — aucun signalement, localisation : Royaume-Uni |
+| VirusTotal | 0/92 — aucune compromission détectée |
+
+> ⚠️ **Une IP propre ne signifie pas une IP saine.** Une réputation vierge indique uniquement que cette IP n'a jamais été signalée publiquement — pas qu'elle est inoffensive. Un attaquant utilisant une IP résidentielle fraîche ou un compte compromis n'apparaîtra pas dans ces bases.
+
+## 3. Vérification des accès réussis
 
 On commence par vérifier si cette IP a eu des requêtes abouties (status 200) :
 
@@ -52,7 +62,7 @@ La conclusion change complètement par rapport à l'épisode 1. Cette IP n'est p
 
 ---
 
-## 3. Analyse avec `| stats` — pages les plus accédées
+## 4. Analyse avec `| stats` — pages les plus accédées
 
 Pour transformer ces 894 événements en données exploitables, on utilise `| stats` pour compter les accès par URI :
 
@@ -75,7 +85,7 @@ Les résultats confirment que l'IP accède principalement à des pages produits 
 
 ---
 
-## 4. Analyse avec `| top` — confirmation
+## 5. Analyse avec `| top` — confirmation
 
 On utilise `| top` pour confirmer les URIs les plus fréquentes sur l'ensemble de l'activité de cette IP, tous status confondus :
 
@@ -100,7 +110,7 @@ Les 5 URIs les plus fréquentes sont toutes des `/product.screen` — cette IP c
 
 ---
 
-## 5. Analyse temporelle avec `| timechart`
+## 6. Analyse temporelle avec `| timechart`
 
 Pour comprendre **quand** cette IP est active, on utilise `| timechart` pour visualiser l'évolution de son activité jour par jour sur une échelle de 7 jours :
 
@@ -132,7 +142,7 @@ index=main sourcetype="access_combined_wcookie" clientip=87.194.216.51
 
 ---
 
-## 6. Vue détaillée par status code
+## 7. Vue détaillée par status code
 
 En activant le mode **Trellis**, on obtient une vue comparative de chaque status code sur la même période :
 
@@ -156,13 +166,13 @@ En activant le mode **Trellis**, on obtient une vue comparative de chaque status
 
 ---
 
-## 7. Conclusion
+## 8. Conclusion
 
 > 🔴 **Cette IP mène une double activité simultanée.**
 
 | Indicateur | Constat |
 |-----------|---------|
-| 894 accès réussis (status 200) | ✅ Utilisation active et légitime du site |
+| 894 accès réussis (status 200) | ✅ Utilisation active du site |
 | Achats effectués (`/cart/success.do`) | ✅ Transactions réelles abouties |
 | Tentatives sur `/passwords.pdf` (x3) | ❌ Ciblage répété de fichiers sensibles |
 | Activité 7j/7 sans interruption | ⚠️ Comportement atypique |
@@ -176,7 +186,7 @@ Le SOC ne peut pas déterminer avec certitude l'identité derrière cette IP. De
 - Un **insider** qui abuse de son accès légitime pour chercher des données sensibles
 ---
 
-## 8. Réponse opérationnelle SOC
+## 9. Réponse opérationnelle SOC
 
 ### 🚧 Confinement immédiat
 

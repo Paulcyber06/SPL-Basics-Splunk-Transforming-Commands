@@ -102,7 +102,7 @@ Les 5 URIs les plus fréquentes sont toutes des `/product.screen` — cette IP c
 
 ## 5. Analyse temporelle avec `| timechart`
 
-Pour comprendre **quand** cette IP est active, on utilise `| timechart` pour visualiser l'évolution de son activité jour par jour :
+Pour comprendre **quand** cette IP est active, on utilise `| timechart` pour visualiser l'évolution de son activité jour par jour sur une echelle de 7 jours :
 
 ```
 index=main sourcetype="access_combined_wcookie" clientip=87.194.216.51

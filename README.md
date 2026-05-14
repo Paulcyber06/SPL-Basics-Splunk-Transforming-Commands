@@ -64,7 +64,7 @@ La conclusion change complètement par rapport à l'épisode 1. Cette IP n'est p
 
 ## 4. Analyse avec `| stats` — pages les plus accédées
 
-Pour transformer ces 894 événements en données exploitables, on utilise `| stats` pour compter les accès par URI :
+Pour transformer ces 894 événements en données exploitables, on utilise `| stats` pour compter les accès par URI:
 
 ```
 index=main sourcetype="access_combined_wcookie" status=200 clientip=87.194.216.51

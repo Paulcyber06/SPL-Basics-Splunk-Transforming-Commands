@@ -152,7 +152,7 @@ En activant le mode **Trellis**, on obtient une vue comparative de chaque status
 | 503 | Service indisponible | Régulier, 2 à 14/jour |
 | 505 | Version HTTP non supportée | Pic mercredi 7 mai (~10), puis décroissance |
 
-> ⚠️ **Les erreurs 404 ont un pic différent des erreurs 200.** L'IP intensifie sa reconnaissance les jours où son activité "normale" est plus faible — technique délibérée pour éviter la détection.
+> ⚠️ **Les erreurs 404 présentent un profil distinct des erreurs 200. Les pics d'activité semblent corrélés sur la période.
 
 ---
 

@@ -152,7 +152,7 @@ En activant le mode **Trellis**, on obtient une vue comparative de chaque status
 | 503 | Service indisponible | Régulier, 2 à 14/jour |
 | 505 | Version HTTP non supportée | Pic mercredi 7 mai (~10), puis décroissance |
 
-> ⚠️ **Les erreurs 404 présentent un profil distinct des erreurs 200. Les pics d'activité semblent corrélés sur la période.
+> ⚠️ **Les erreurs 404 suivent la même courbe que les erreurs 200 — la reconnaissance opportuniste s'intensifie sur les mêmes plages d'activité.
 
 ---
 
@@ -166,7 +166,7 @@ En activant le mode **Trellis**, on obtient une vue comparative de chaque status
 | Achats effectués (`/cart/success.do`) | ✅ Transactions réelles abouties |
 | Tentatives sur `/passwords.pdf` (x3) | ❌ Ciblage répété de fichiers sensibles |
 | Activité 7j/7 sans interruption | ⚠️ Comportement atypique |
-| Pics de 404 décalés par rapport aux 200 | ⚠️ Reconnaissance dissimulée dans le trafic normal |
+| Pics de 404 corrélés aux 200 | ⚠️ Reconnaissance opportuniste sur les mêmes plages d'activité |
 
 Cette IP utilise le site comme un client normal tout en sondant discrètement des fichiers sensibles en parallèle. C'est le profil d'un attaquant qui **tente de se fondre dans le trafic légitime** pour éviter la détection.
 

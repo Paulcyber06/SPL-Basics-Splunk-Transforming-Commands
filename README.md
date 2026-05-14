@@ -19,7 +19,9 @@
 
 ## 1. Contexte
 
-Suite à la détection de l'activité de reconnaissance dans l'Épisode 1, le SOC approfondit l'investigation sur l'IP suspecte `87.194.216.51`, en vérifieant les requêtes 200 (Status OK) de cette IP. L'objectif est de comprendre son comportement complet — pas uniquement les erreurs 404, mais l'ensemble de ses interactions avec le serveur web de Buttercup Games.
+Suite à la détection de l'activité de reconnaissance dans l'Épisode 1, le SOC approfondit l'investigation sur l'IP suspecte `87.194.216.51`, en vérifieant les requêtes 200 (Status OK) de cette IP. 
+
+L'objectif est de comprendre son comportement complet — pas uniquement les erreurs 404, mais l'ensemble de ses interactions avec le serveur web de Buttercup Games.
 
 L'attaquant n'a toujours pas trouvé `/passwords.pdf`. Mais son activité persistante sur 7 jours laisse supposer qu'il cherche une autre voie d'entrée.
 

@@ -30,10 +30,14 @@ L'attaquant n'a toujours pas trouvé `/passwords.pdf`. Mais son activité persis
 
 Avant d'approfondir l'analyse, on vérifie la réputation de l'IP `87.194.216.51` sur les bases de données publiques.
 
+<br>
+
 | Source | Résultat |
 |--------|----------|
 | AbuseIPDB | 0% — aucun signalement, localisation : Royaume-Uni |
 | VirusTotal | 0/92 — aucune compromission détectée |
+
+<br>
 
 > ⚠️ **Une IP propre ne signifie pas une IP saine.** Une réputation vierge indique uniquement que cette IP n'a jamais été signalée publiquement — pas qu'elle est inoffensive. Un attaquant utilisant une IP résidentielle fraîche ou un compte compromis n'apparaîtra pas dans ces bases.
 
@@ -48,15 +52,23 @@ index=main sourcetype="access_combined_wcookie" status=200 clientip=87.194.216.5
 
 Nous obtenons **894 événements** avec status 200.
 
+<br>
+
 [![894 accès réussis — status 200](1.png)](1.png)
 
+<br>
+
 La conclusion change complètement par rapport à l'épisode 1. Cette IP n'est pas uniquement en reconnaissance — elle utilise activement le site. On peut voir dans les résultats :
+
+<br>
 
 | URI | Signification |
 |-----|--------------|
 | `/cart.do?action=purchase` | Achats effectués |
 | `/cart/success.do` | Transactions abouties |
 | `/product.screen` | Consultation de pages produits |
+
+<br>
 
 > ⚠️ **894 accès réussis contre seulement 20 erreurs 404.** Cette IP se fond dans le trafic légitime tout en sondant des fichiers sensibles en parallèle.
 
@@ -79,7 +91,12 @@ index=main sourcetype="access_combined_wcookie" status=200 clientip=87.194.216.5
 - `sort -count` — trie du plus grand au plus petit (le signe `-` = décroissant)
 - `head 10` — garde les 10 premiers résultats
 
+<br>
+
+
 [![Stats — top 10 des pages accédées](2.png)](2.png)
+
+<br>
 
 Les résultats confirment que l'IP accède principalement à des pages produits et effectue des transactions réelles.
 
@@ -100,7 +117,11 @@ index=main sourcetype="access_combined_wcookie" clientip=87.194.216.51
 - `showperc=false` — supprime la colonne de pourcentage
 - `limit=5` — limite aux 5 premières valeurs
 
+<br>
+
 [![Top 5 des URIs les plus fréquentes](3.png)](3.png)
+
+<br>
 
 Les 5 URIs les plus fréquentes sont toutes des `/product.screen` — cette IP consulte massivement des pages produits spécifiques.
 
@@ -125,7 +146,11 @@ index=main sourcetype="access_combined_wcookie" clientip=87.194.216.51
 - `span=1d` — regroupe les événements par jour
 - `count by status` — crée une série par status code
 
+<br>
+
 [![Timechart — activité globale sur 7 jours](4.png)](4.png)
+
+<br>
 
 
 
@@ -146,7 +171,11 @@ index=main sourcetype="access_combined_wcookie" clientip=87.194.216.51
 
 En activant le mode **Trellis**, on obtient une vue comparative de chaque status code sur la même période :
 
+<br>
+
 [![Vue détaillée par status code — Trellis](6.png)](6.png)
+
+<br>
 
 **Ce que cette vue apporte :**
 
@@ -170,6 +199,8 @@ En activant le mode **Trellis**, on obtient une vue comparative de chaque status
 
 > 🔴 **Cette IP mène une double activité simultanée.**
 
+<br>
+
 | Indicateur | Constat |
 |-----------|---------|
 | 894 accès réussis (status 200) | ✅ Utilisation active du site |
@@ -177,6 +208,8 @@ En activant le mode **Trellis**, on obtient une vue comparative de chaque status
 | Tentatives sur `/passwords.pdf` (x3) | ❌ Ciblage répété de fichiers sensibles |
 | Activité 7j/7 sans interruption | ⚠️ Comportement atypique |
 | Pics de 404 corrélés aux 200 | ⚠️ Reconnaissance opportuniste sur les mêmes plages d'activité |
+
+<br>
 
 Cette IP utilise le site comme un client normal tout en sondant discrètement des fichiers sensibles en parallèle. C'est le profil d'un attaquant qui **tente de se fondre dans le trafic légitime** pour éviter la détection.
 

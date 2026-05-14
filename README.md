@@ -207,13 +207,17 @@ Le SOC ne peut pas déterminer avec certitude l'identité derrière cette IP. Tr
 - Analyser les données d'achat pour détecter une éventuelle fraude
 
 ---
+<div align="center">
+
 ---
 
-## 🔗 Navigation
+### 🔗 Navigation
 
 | ⬅️ Épisode précédent | ➡️ Épisode suivant |
-|---|---|
-| [E2 — Splunk : Détection de Reconnaissance](https://github.com/Paulcyber06/E2-Splunk-Recognition-Detection) | [E4 — Splunk : Dashboard et Alertes](https://github.com/Paulcyber06/E4-Splunk-Dashboard-and-Alerts) |
+|:---:|:---:|
+| [← E2 — Splunk : Détection de Reconnaissance](https://github.com/Paulcyber06/E2-Splunk-Recognition-Detection) | [E4 — Splunk : Dashboard et Alertes →](https://github.com/Paulcyber06/E4-Splunk-Dashboard-and-Alerts) |
+
+</div>
 
 ---
 

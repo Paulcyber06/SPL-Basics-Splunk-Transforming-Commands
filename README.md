@@ -131,6 +131,9 @@ index=main sourcetype="access_combined_wcookie" clientip=87.194.216.51
 | 503 | Service Unavailable | Serveur temporairement indisponible |
 | 505 | HTTP Version Not Supported | Requêtes avec version HTTP incorrecte |
 
+
+
+
 **Ce que le graphique révèle :**
 
 | Observation | Interprétation |

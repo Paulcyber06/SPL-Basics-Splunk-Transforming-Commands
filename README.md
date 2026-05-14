@@ -143,10 +143,14 @@ En activant le mode **Trellis**, on obtient une vue comparative de chaque status
 | Status | Signification | Observation |
 |--------|--------------|-------------|
 | 200 | Accès réussi | 74 à 344 événements/jour — activité dominante |
-| 404 | Page non trouvée | Tentatives sur `/passwords.pdf` et `/hidden/` |
 | 400 | Mauvaise requête | Constant, 2 à 4/jour |
-| 500 | Erreur serveur | Pic le lundi 11 mai |
+| 403 | Accès interdit | Faible, 1 à 4/jour |
+| 404 | Page non trouvée | Tentatives sur `/passwords.pdf` et `/hidden/` — pics irréguliers, 2 à 10/jour |
+| 406 | Non acceptable | Faible, 4 à 8/jour |
+| 408 | Timeout requête | Pic marqué vendredi 8 mai (~11) |
+| 500 | Erreur serveur | Pic vendredi 8 mai (~8) |
 | 503 | Service indisponible | Régulier, 2 à 14/jour |
+| 505 | Version HTTP non supportée | Pic mercredi 7 mai (~10), puis décroissance |
 
 > ⚠️ **Les erreurs 404 ont un pic différent des erreurs 200.** L'IP intensifie sa reconnaissance les jours où son activité "normale" est plus faible — technique délibérée pour éviter la détection.
 

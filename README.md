@@ -133,7 +133,7 @@ index=main sourcetype="access_combined_wcookie" clientip=87.194.216.51
 
 | Observation | Interprétation |
 |------------|---------------|
-| Activité du 5 au 12 mai | 7 jours consécutifs sans interruption |
+| Activité du 4 au 11 mai | 7 jours consécutifs sans interruption |
 | Pic le vendredi 8 mai (~340 events) | Journée la plus active |
 | Activité le week-end | Comportement atypique pour un utilisateur légitime |
 | Status 200 dominant | L'activité normale masque la reconnaissance |

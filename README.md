@@ -206,17 +206,13 @@ Le SOC ne peut pas déterminer avec certitude l'identité derrière cette IP. Tr
 - Vérifier si d'autres IPs présentent le même pattern comportemental
 - Analyser les données d'achat pour détecter une éventuelle fraude
 
----
 <div align="center">
+<br>
 
----
+[![⬅️ Précédent](https://img.shields.io/badge/⬅️%20Précédent--grey?style=for-the-badge)](https://github.com/Paulcyber06/E2-Splunk-Recognition-Detection)
+[![➡️ Suivant](https://img.shields.io/badge/➡️%20Suivant--blue?style=for-the-badge)](https://github.com/Paulcyber06/E4-Splunk-Dashboard-and-Alerts)
 
-### 🔗 Navigation
-
-| ⬅️ Épisode précédent | ➡️ Épisode suivant |
-|:---:|:---:|
-| [← E2 — Splunk : Détection de Reconnaissance](https://github.com/Paulcyber06/E2-Splunk-Recognition-Detection) | [E4 — Splunk : Dashboard et Alertes →](https://github.com/Paulcyber06/E4-Splunk-Dashboard-and-Alerts) |
-
+<br>
 </div>
 
 ---

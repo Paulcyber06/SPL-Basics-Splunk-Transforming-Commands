@@ -210,7 +210,7 @@ Le SOC ne peut pas déterminer avec certitude l'identité derrière cette IP. Tr
 <br>
 
 [![⬅️ Précédent](https://img.shields.io/badge/⬅️%20Précédent--grey?style=for-the-badge)](https://github.com/Paulcyber06/E2-Splunk-Recognition-Detection)
-[![➡️ Suivant](https://img.shields.io/badge/➡️%20Suivant--blue?style=for-the-badge)](https://github.com/Paulcyber06/E4-Splunk-Dashboard-and-Alerts)
+[![➡️ Suivant](https://img.shields.io/badge/➡️%20Suivant--grey?style=for-the-badge)](https://github.com/Paulcyber06/E4-Splunk-Dashboard-and-Alerts)
 
 <br>
 </div>

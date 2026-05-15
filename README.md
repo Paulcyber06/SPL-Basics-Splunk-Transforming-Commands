@@ -1,6 +1,6 @@
 # Épisode 3 — Splunk : Analyse Comportementale d'une IP Suspecte
 
-> Troisième incident dans la série d'attaques contre **Buttercup Games** — l'IP suspecte n'a pas trouvé `/passwords.pdf` mais utilise activement le site. Le SOC approfondit l'investigation avec les commandes transforming **stats**, **top** et **timechart**.
+> Troisième incident dans la série d'attaques contre **Buttercup Games**.L'IP suspecte n'a pas trouvé `/passwords.pdf` mais utilise activement le site. Le SOC approfondit l'investigation avec les commandes transforming **stats**, **top** et **timechart**.
 
 ---
 
@@ -21,7 +21,7 @@
 
 Suite à la détection de l'activité de reconnaissance dans l'Épisode 1, le SOC approfondit l'investigation sur l'IP suspecte `87.194.216.51`, en vérifieant les requêtes 200 (Status OK). 
 
-L'objectif est de comprendre son comportement complet — pas uniquement les erreurs 404, mais l'ensemble de ses interactions avec le serveur web de Buttercup Games.
+L'objectif est de comprendre son comportement complet, pas uniquement les erreurs 404, dans l'ensemble de ses interactions avec le serveur web de Buttercup Games.
 
 L'attaquant n'a toujours pas trouvé `/passwords.pdf`. Mais son activité persistante sur 7 jours laisse supposer qu'il cherche une autre voie d'entrée.
 
@@ -39,7 +39,7 @@ Avant d'approfondir l'analyse, on vérifie la réputation de l'IP `87.194.216.51
 
 <br>
 
-> ⚠️ **Une IP propre ne signifie pas une IP saine.** Une réputation vierge indique uniquement que cette IP n'a jamais été signalée publiquement — pas qu'elle est inoffensive. Un attaquant utilisant une IP résidentielle fraîche ou un compte compromis n'apparaîtra pas dans ces bases.
+> ⚠️ **Une IP propre ne signifie pas une IP saine.** Une réputation vierge indique uniquement que cette IP n'a jamais été signalée publiquement, pas qu'elle est inoffensive. Un attaquant utilisant une IP résidentielle fraîche ou un compte compromis n'apparaîtra pas dans ces bases.
 
 ## 3. Vérification des accès réussis
 
@@ -58,7 +58,7 @@ Nous obtenons **894 événements** avec status 200.
 
 <br>
 
-La conclusion change complètement par rapport à l'épisode 1. Cette IP n'est pas uniquement en reconnaissance — elle utilise activement le site. On peut voir dans les résultats :
+La conclusion change complètement par rapport à l'épisode 1. Cette IP n'est pas uniquement en reconnaissance. Elle utilise activement le site. On peut voir dans les résultats :
 
 <br>
 
@@ -187,7 +187,7 @@ En activant le mode **Trellis**, on obtient une vue comparative de chaque status
 
 | Status | Signification | Observation |
 |--------|--------------|-------------|
-| 200 | Accès réussi | 74 à 344 événements/jour — activité dominante |
+| 200 | Accès réussi | 74 à 344 événements/jour ; activité dominante |
 | 400 | Mauvaise requête | Constant, 2 à 4/jour |
 | 403 | Accès interdit | Faible, 1 à 4/jour |
 | 404 | Page non trouvée | Tentatives sur `/passwords.pdf` et `/hidden/` — pics irréguliers, 2 à 10/jour |
@@ -199,7 +199,7 @@ En activant le mode **Trellis**, on obtient une vue comparative de chaque status
 
 <br>
 
-> ⚠️ **Les erreurs 404 suivent la même courbe que les erreurs 200 — la reconnaissance opportuniste s'intensifie sur les mêmes plages d'activité.
+> ⚠️ **Les erreurs 404 suivent la même courbe que les erreurs 200. La reconnaissance opportuniste s'intensifie sur les mêmes plages d'activité.
 
 ---
 
@@ -225,7 +225,7 @@ Le SOC ne peut pas déterminer avec certitude l'identité derrière cette IP. Tr
 
 - Un **compte compromis** utilisé comme couverture par un attaquant externe
 - Un **insider** qui abuse de son accès légitime pour chercher des données sensibles
-- Un **utilisateur légitime** dont le comportement est anormal mais pas nécessairement malveillant — l'investigation complémentaire permettra de trancher
+- Un **utilisateur légitime** dont le comportement est anormal mais pas nécessairement malveillant ( l'investigation complémentaire permettra de trancher )
 ---
 
 ## 9. Réponse opérationnelle SOC
